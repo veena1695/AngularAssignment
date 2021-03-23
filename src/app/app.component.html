@@ -1,0 +1,51 @@
+
+<table *ngIf="dataArr.length > 0" class="table table-bordered table-striped">
+  <col>
+  <colgroup span="5"></colgroup>
+  <colgroup span="2"></colgroup>
+  <tr>
+    <th rowspan="3">Id</th>
+    <th rowspan="3">Name</th>
+    <th rowspan="3">Username</th>
+    <th rowspan="3">Email</th>
+    
+    <th colspan="6" scope="colgroup">Address</th>
+    <th rowspan="3" scope="colgroup">Phone</th>
+    <th rowspan="3" scope="colgroup">Website</th>
+    <th colspan="3" scope="colgroup">Company</th>
+
+    
+  </tr>
+  <tr>
+    <th rowspan="2" scope="col">Street</th>
+    <th rowspan="2" scope="col">Suite</th>
+    <th rowspan="2" scope="col">City</th>
+    <th rowspan="2" scope="col">Zipcode</th>
+    <th scope="col" colspan="2">Geo</th>
+    <th rowspan="2" scope="col">Name</th>
+    <th rowspan="2" scope="col">Catch Phrase </th>
+    <th rowspan="2" scope="col">BS</th>
+  </tr>
+  <tr>
+    <th scope="">Lat</th>
+    <th scope="">Lang</th>
+  </tr>
+  <tr *ngFor="let item of dataArr"> 
+    <td>{{item.id}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.username}}</td>
+    <td>{{item.email}}</td>
+    <td>{{item.address.street}}</td>
+    <td>{{item.address.suite}}</td>
+    <td>{{item.address.city}}</td>
+    <td>{{item.address.zipcode}}</td>
+    <td>{{item.address.geo.lat}}</td>
+    <td>{{item.address.geo.lng}}</td>
+    <td>{{item.phone}}</td>
+    <td>{{item.website}}</td>
+    <td>{{item.company.name}}</td>
+    <td>{{item.company.catchPhrase}}</td>
+    <td>{{item.company.bs}}</td>
+  </tr>
+  
+</table>
